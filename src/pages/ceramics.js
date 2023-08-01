@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 import CeramicsList from '../components/ceramics-list'
 
 const CeramicsPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <CeramicsList nodes={data.allContentfulProduct.nodes} />

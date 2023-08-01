@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 
 const useIsMobile = () => {
-  const [width, setWidth] = useState(window.innerWidth)
+  const initialWidth = typeof window !== 'undefined' ? window.innerWidth : 0
+
+  const [width, setWidth] = useState(initialWidth)
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth)
