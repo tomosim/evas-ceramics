@@ -1,0 +1,32 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  gap: 50px;
+  width: 100%;
+  height: 3.5rem;
+}
+
+.navigationItem {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.25rem;
+  margin: 0 3rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .navigationItem {
+    font-size: 1.125rem;
+  } 
+}
+
+.navigationItem a {
+  border-bottom: 1.5px solid transparent;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.navigationItem a:hover {
+  border-bottom-color: var(--black);
+}
