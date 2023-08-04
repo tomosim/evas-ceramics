@@ -53,7 +53,6 @@
   /* tokens */
   /* colors */
   --primary: #4a90e2;
-  --background: repeating-linear-gradient(180deg, rgba(200,200,200,0.5) 0vh, rgba(255,246,203,0.5) 42vh, rgba(254,224,85,0.5) 50vh, rgba(249,249,246,0.5) 82vh, rgba(254,224,85,0.5) 92vh, rgb(213, 213, 201) 98vh, rgba(231,231,231,0.5) 102vh, rgba(75,102,186,0.5) 136vh, rgba(200,200,200,0.5) 150vh), url(https://grainy-gradients.vercel.app/noise.svg);  ;
   --border: var(--black-fade-5);
 
   /* text */
