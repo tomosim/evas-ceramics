@@ -12,7 +12,7 @@ const Home = () => {
         style={{
           position: 'absolute',
           overflow: 'hidden',
-          zIndex: '-1',
+          zIndex: '0',
         }}
       />
       <StaticImage
@@ -22,7 +22,7 @@ const Home = () => {
         style={{
           position: 'absolute',
           overflow: 'hidden',
-          zIndex: '-1',
+          zIndex: '0',
         }}
       />
       <StaticImage
@@ -32,7 +32,7 @@ const Home = () => {
         style={{
           position: 'absolute',
           overflow: 'hidden',
-          zIndex: '-1',
+          zIndex: '0',
         }}
       />
       <StaticImage
@@ -42,7 +42,7 @@ const Home = () => {
         style={{
           position: 'absolute',
           overflow: 'hidden',
-          zIndex: '-1',
+          zIndex: '0',
         }}
       />
       <StaticImage
@@ -52,7 +52,7 @@ const Home = () => {
         style={{
           position: 'absolute',
           overflow: 'hidden',
-          zIndex: '-1',
+          zIndex: '0',
         }}
       />
     </>
