@@ -4,8 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'salo',
-    description: 'Eva Salo',
+    title: 'Salo Ceramics',
+    description:
+      'Eva Salo | Ceramics portfolio | Shop handcrafted ceramic pieces',
   },
   plugins: [
     'gatsby-transformer-sharp',
