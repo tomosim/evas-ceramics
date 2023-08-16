@@ -36,7 +36,7 @@ const Ceramic = ({ name, specs, price, images }) => {
       <ul className={styles.info}>
         <li className={styles.label}>{name}</li>
         <li className={styles.label}>{specs}</li>
-        <li>{price}€</li>
+        <li className={`${styles.label} ${styles.last}`}>{price}€</li>
       </ul>
     </li>
   )
