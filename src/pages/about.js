@@ -2,22 +2,43 @@ import React from 'react'
 import DraggableCard from '../components/draggable-card'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
+import useIsMobile from '../hooks/useIsMobile'
 
-const About = () => (
-  <>
-    <Layout>
-      <DraggableCard defaultPosition={{ x: 50, y: 80 }} grid={[25, 25]}>
-        Hello my name is tom
-      </DraggableCard>
-      <DraggableCard defaultPosition={{ x: 400, y: 100 }} grid={[25, 25]}>
-        Welcome to my website
-      </DraggableCard>
-      <DraggableCard defaultPosition={{ x: 100, y: 50 }} grid={[25, 25]}>
-        Pls buy my stuff
-      </DraggableCard>
-    </Layout>
-  </>
-)
+const randomGridPlacement = (isMobile) => {
+  // const height = window.innerHeight
+  const width = window.innerWidth
+
+  let x = Math.random() * width
+  const xLimit = width - 350
+  if (x >= xLimit) x = x - 350
+  if (x < 0) x = 0
+  let y = Math.round(Math.random()) * 50
+  const yLimit = width - 250
+  if (y >= yLimit) y = y - 250
+
+  return { x, y: isMobile ? 0 : y }
+}
+
+const About = ({ data }) => {
+  const [isMobile] = useIsMobile()
+
+  return (
+    <>
+      <Layout>
+        {data.allContentfulAbout.nodes.map((node) => {
+          return (
+            <DraggableCard
+              defaultPosition={randomGridPlacement(isMobile)}
+              grid={[25, 25]}
+            >
+              {node.text}
+            </DraggableCard>
+          )
+        })}
+      </Layout>
+    </>
+  )
+}
 
 export default About
 

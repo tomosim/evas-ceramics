@@ -32,7 +32,9 @@ const MobileDropdownMenu = () => {
     </nav>
   ) : (
     <nav>
-      <button onClick={() => setIsOpen(true)}>Menu</button>
+      <button className={styles.menuButton} onClick={() => setIsOpen(true)}>
+        Menu
+      </button>
     </nav>
   )
 }

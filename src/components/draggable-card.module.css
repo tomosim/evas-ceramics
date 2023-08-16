@@ -7,19 +7,21 @@
     font-family: 'Courier New', Courier, monospace;
     border-radius: 5px;
     box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.7);
-}
-
-.handle {
-width: 100%;
-    background-color: black;
-    height: 1.2rem;
-    color: white;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: bold;
     cursor: pointer;
 }
 
+
 .text {
     margin: 0.5rem 1rem;
+    font-size: large;
 }
+
+    @media only screen and (max-width: 640px) {
+        .card{
+            height: 150px;
+            width: 275px;
+        }
+        .text {
+            font-size: medium;
+        }
+    }
