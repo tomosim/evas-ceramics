@@ -4,8 +4,12 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import useIsMobile from '../hooks/useIsMobile'
 
-const randomGridPlacement = (isMobile) => {
+const randomGridPlacement = (isMobile, index) => {
   const width = typeof window !== 'undefined' ? window.innerWidth : 0
+
+  if (isMobile) {
+    return { x: width / 2 - 275 / 2, y: 30 + index * 40 }
+  }
 
   let x = Math.random() * width
   const xLimit = width - 350
@@ -24,10 +28,10 @@ const About = ({ data }) => {
   return (
     <>
       <Layout>
-        {data.allContentfulAbout.nodes.map((node) => {
+        {data.allContentfulAbout.nodes.map((node, i) => {
           return (
             <DraggableCard
-              defaultPosition={randomGridPlacement(isMobile)}
+              defaultPosition={randomGridPlacement(isMobile, i)}
               grid={[25, 25]}
             >
               {node.text}
