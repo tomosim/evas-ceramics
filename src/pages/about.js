@@ -5,8 +5,7 @@ import { graphql } from 'gatsby'
 import useIsMobile from '../hooks/useIsMobile'
 
 const randomGridPlacement = (isMobile) => {
-  // const height = window.innerHeight
-  const width = window.innerWidth
+  const width = typeof window !== 'undefined' ? window.innerWidth : 0
 
   let x = Math.random() * width
   const xLimit = width - 350
