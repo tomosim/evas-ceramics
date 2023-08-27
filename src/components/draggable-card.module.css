@@ -1,5 +1,6 @@
 .card {
-    height: 250px;
+    min-height: 250px;
+    height: fit-content;
     width: 350px;
     padding: 0;
     border: black 1px solid;
