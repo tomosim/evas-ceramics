@@ -19,7 +19,7 @@
 
     @media only screen and (max-width: 640px) {
         .card{
-            height: 150px;
+            min-height: 150px;
             width: 275px;
         }
         .text {
