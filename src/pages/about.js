@@ -34,7 +34,8 @@ const About = ({ data }) => {
               defaultPosition={randomGridPlacement(isMobile, i)}
               grid={[25, 25]}
             >
-              {node.text}
+              <h2>{node.text}</h2>
+              <p>{node.bodyText}</p>
             </DraggableCard>
           )
         })}
@@ -50,6 +51,7 @@ export const pageQuery = graphql`
     allContentfulAbout {
       nodes {
         text
+        bodyText
       }
     }
   }
